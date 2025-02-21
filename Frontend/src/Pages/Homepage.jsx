@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import left from "../assets/left.jpg";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Testimonial from "../Components/Testimonial";
+import gsap from "gsap";
+import React from "react";
+import left from "../assets/left.jpg";
 
 const HeroSection = () => {
     useGSAP(() => {
@@ -62,7 +61,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-    <Testimonial/>
+    {/* <Testimonial/> */}
     </>
 
 

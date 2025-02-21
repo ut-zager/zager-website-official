@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimatedTestimonials from "../Components/ui/animated-testimonials"
+import { AnimatedTestimonials } from "../Components/ui/animated-testimonials"
 
 function Testimonial() {
   return (
@@ -9,4 +9,4 @@ function Testimonial() {
   )
 }
 
-export default Testimonial
+export default Testimonial;
