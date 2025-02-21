@@ -48,7 +48,7 @@ const OurProducts = () => {
 
   return (
     <div className="py-10 relative overflow-hidden h-[100vh]">
-      <h4 className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Our Products</h4>
+      <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 12px rgba(238, 201, 115, 0.753)", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Our Products</h4>
       <div className="relative w-full overflow-hidden">
         <div ref={carouselRef} className="flex w-full transition-transform duration-1000">
           {products.map((product, idx) => (
