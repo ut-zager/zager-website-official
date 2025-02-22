@@ -1,17 +1,18 @@
-import { Route, Routes } from 'react-router-dom'
+import Clients from './Components/Clients'
 // import './index.css'
-import Homepage from './Pages/Homepage'
-import NavBar from './Components/Navbar'
-import OurProducts from './Components/Products'
+// import Homepage from './Pages/Homepage'
+// import NavBar from './Components/Navbar'
+// import OurProducts from './Components/Products'
 function App() {
 
   return (
     <>
-    <NavBar/>
+    {/* <NavBar/>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
       </Routes>
-      <OurProducts/>
+      <OurProducts/> */}
+      <Clients/>
     </>
   )
 }

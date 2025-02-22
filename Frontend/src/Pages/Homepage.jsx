@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
 import left from "../assets/left.jpg";
+import Clients from "../Components/Clients";
 
 const HeroSection = () => {
     useGSAP(() => {
@@ -62,6 +63,7 @@ const HeroSection = () => {
       </div>
     </section>
     {/* <Testimonial/> */}
+    <Clients/>
     </>
 
 
