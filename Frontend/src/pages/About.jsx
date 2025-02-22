@@ -1,10 +1,16 @@
 import React from 'react'
-import AboutUsSection from '../components/AboutUsSection'
+import PromtionalVedios from '../components/PromtionalVedios'
+// import AboutUsSection from '../components/AboutUsSection'
+// import Demo from '../components/Demo'
 
 const About = () => {
   return (
     <div>
-       <AboutUsSection/>
+       {/* <AboutUsSection/> */}
+
+       <PromtionalVedios/>
+
+       {/* <Demo/> */}
     </div>
   )
 }
