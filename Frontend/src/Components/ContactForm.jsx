@@ -110,6 +110,12 @@ const ContactForm = () => {
         });
       }
     });
+
+    // Clean up on unmount
+    return () => {
+      gsap.killTweensOf(leftColumnRef.current);
+      gsap.killTweensOf(rightColumnRef.current);
+    };
   }, []);
 
 
@@ -128,6 +134,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white min-h-screen overflow-hidden mt-15 md:mt-0">
+        {/* <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 22px rgba(0,0,0,0)", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Contact us</h4> */}
         <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 12px rgba(238, 201, 115, 0.753)", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Contact us</h4>
       <div ref={containerRef} className="container mx-auto px-4 py-12 md:py-20 !pt-4">
         <div className="grid md:grid-cols-2 gap-12 items-center px-10">

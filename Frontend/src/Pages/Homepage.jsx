@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Testimonial from "../Components/Testimonial";
 import ContactForm from "../Components/ContactForm";
+import AboutUsSection from "../Components/AboutUsSection";
+import OurServicesSections from "../Components/OurServicesSections";
 
 const HeroSection = () => {
     useGSAP(() => {
@@ -63,6 +65,8 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+    <OurServicesSections/>
+    <AboutUsSection/>
     <ContactForm/>
     <Testimonial/>
     </>
