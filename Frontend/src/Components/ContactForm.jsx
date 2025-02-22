@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { FloatingDock } from "../Components/ui/floating-dock";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import {
   IconBrandGithub,
   IconBrandX,
@@ -10,7 +13,12 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ContactForm = () => {
+  const leftColumnRef = useRef(null);
+  const rightColumnRef = useRef(null);
+  const containerRef = useRef(null);
     const links = [
         {
           title: "Instagram",
@@ -78,6 +86,33 @@ const ContactForm = () => {
     message: ''
   });
 
+  useEffect(() => {
+    // Set initial states
+    gsap.set(leftColumnRef.current, { x: -200, opacity: 0 });
+    gsap.set(rightColumnRef.current, { x: 200, opacity: 0 });
+
+    // Create the scroll trigger animation
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top center",
+      onEnter: () => {
+        gsap.to(leftColumnRef.current, {
+          x: 0,
+          opacity: 1,
+          duration: 1.5,
+          ease: "power3.out"
+        });
+        gsap.to(rightColumnRef.current, {
+          x: 0,
+          opacity: 1,
+          duration: 1.5,
+          ease: "power3.out"
+        });
+      }
+    });
+  }, []);
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
@@ -92,12 +127,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen overflow-hidden mt-15 md:mt-0">
         <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 12px rgba(238, 201, 115, 0.753)", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Contact us</h4>
-      <div className="container mx-auto px-4 py-12 md:py-20 !pt-4">
+      <div ref={containerRef} className="container mx-auto px-4 py-12 md:py-20 !pt-4">
         <div className="grid md:grid-cols-2 gap-12 items-center px-10">
           {/* Left Column */}
-          <div className="space-y-6 ">
+          <div ref={leftColumnRef} className="space-y-6 ">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
                 TRANSFORM YOUR BUSINESS WITH
             </h1>
@@ -129,7 +164,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg">
+          <div ref={rightColumnRef} className="bg-white rounded-lg p-6 md:p-8 shadow-lg">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Start a conversation with us
             </h2>
