@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    {/* <NavBar/>
+    <NavBar/>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
       </Routes>
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
