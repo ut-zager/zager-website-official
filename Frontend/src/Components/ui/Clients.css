@@ -1,5 +1,7 @@
 /* Clients.css */
-
+/* *{
+    background: #000;
+}  */
 .clients-container {
     display: flex;
     justify-content: center;
@@ -30,7 +32,7 @@
     justify-content: center;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1); /* bg-opacity-10 */
-    border-radius: 50px 150px; /* rounded-[50px_150px] */
+    border-radius: 140px 140px;
     width: 100%;
     overflow: hidden;
 }
@@ -41,8 +43,8 @@
     top: 0;
     z-index: 10;
     height: 100%;
-    width: 10%;
-    background: linear-gradient(to right, black, transparent);
+    width: 3 0%;
+    background: linear-gradient(to right, white, transparent);
 }
 
 .gradient-right {
@@ -51,8 +53,8 @@
     top: 0;
     z-index: 10;
     height: 100%;
-    width: 10%;
-    background: linear-gradient(to left, black, transparent);
+    width: 30%;
+    background: linear-gradient(to left, white, transparent);
 }
 
 .scroll-container {
