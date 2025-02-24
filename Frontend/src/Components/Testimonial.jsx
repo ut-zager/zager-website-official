@@ -43,7 +43,7 @@ function Testimonial() {
 
   return (
     <>
-        <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 12px rgba(238, 201, 115, 0.753)", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Testimonials</h4>
+        <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", marginBottom:"0px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Testimonials</h4>
         <AnimatedTestimonials testimonials={testimonials} />
     </>
   )

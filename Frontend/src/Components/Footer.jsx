@@ -78,16 +78,16 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
-              <Link to="#" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="https://www.facebook.com/zagerdigitalservices" target='_blank'  className="!text-gray-300 hover:text-white transition-colors">
                 <Facebook className="w-6 h-6" />
               </Link>
-              <Link to="#" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="#" className="!text-gray-300 hover:text-white transition-colors">
                 <Twitter className="w-6 h-6" />
               </Link>
-              <Link to="#" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="https://www.instagram.com/zagerdigitalservices/" target='_blank' className="!text-gray-300 hover:text-white transition-colors">
                 <Instagram className="w-6 h-6" />
               </Link>
-              <Link to="#" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="https://www.linkedin.com/company/zagerdigitalservices/posts/?feedView=all" target='_blank' className="!text-gray-300 hover:text-white transition-colors">
                 <LinkedinIcon className="w-6 h-6" />
               </Link>
             </div>
