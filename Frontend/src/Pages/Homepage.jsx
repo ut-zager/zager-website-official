@@ -2,7 +2,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
 import left from "../assets/left.jpg";
-import Clients from "../Components/Clients";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import Testimonial from "../Components/Testimonial";
+import ContactForm from "../Components/ContactForm";
+import AboutUsSection from "../Components/AboutUsSection";
+import OurServicesSections from "../Components/OurServicesSections";
+import OurProducts from "../Components/Products";
+import Clients from "../Components/Client";
 
 const HeroSection = () => {
     useGSAP(() => {
@@ -62,8 +69,12 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-    {/* <Testimonial/> */}
+    <OurServicesSections/>
+    <AboutUsSection/>
+    <OurProducts/>
     <Clients/>
+    <ContactForm/>
+    <Testimonial/>
     </>
 
 

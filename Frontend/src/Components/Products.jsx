@@ -5,7 +5,7 @@ const products = [
   {
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
     name: "Smart Technology Hub",
-    description: "Advanced technology solution for seamless integration of your smart devices.",
+    description: "Advanced technology solution for seamless integration of your smart devices.f you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough, the next logical step is to find a random paragraph. We created the Random Paragraph Generator with you in mind. The process is quite simple. Choose the number of random paragraphs you'd like to see and click the button. Your chosen number of paragraphs will instantly appear",
     link: "/products/smart-hub"
   },
   {
@@ -17,7 +17,7 @@ const products = [
   {
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1928&auto=format&fit=crop",
     name: "Cloud Security Suite",
-    description: "Comprehensive cloud security solution offering advanced threat detection.",
+    description: "Comprehensive cloud security solution offering advanced threat detection. If you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough, the next logical step is to find a random paragraph. We created the Random Paragraph Generator with you in mind. The process is quite simple. Choose the number of random paragraphs you'd like to see and click the button. Your chosen number of paragraphs will instantly appear",
     link: "/products/security-suite"
   },
 ];
@@ -64,8 +64,8 @@ const OurProducts = () => {
   }, [index]);
 
   return (
-    <div className="py-10 relative overflow-hidden h-[100vh]">
-      <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", textShadow:"0 0 12px rgba(238, 201, 115, 0.753)", marginBottom:"20px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Our Products</h4>
+    <div className=" relative overflow-hidden min-h-[100vh]">
+      <h4 style={{ fontWeight: "700", fontSize: "2.5rem", color:"#ffbe00", marginBottom:"20px" }} className="text-3xl font-bold text-center text-[#ffbe00] mb-4">Our Products</h4>
       <div className="relative w-full overflow-hidden mb-10">
         <div ref={carouselRef} className="flex w-full transition-transform duration-1000">
           {displayProducts.map((product, idx) => (
@@ -75,7 +75,7 @@ const OurProducts = () => {
               </div>
               <div className="flex flex-col justify-center w-full md:w-[50%] p-4 ">
                 <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-4">{product.name}</h4>
-                <p className="text-base md:text-lg text-gray-500 mb-6 overflow-hidden max-h-24 overflow-y-auto">
+                <p className="text-base md:text-lg text-gray-500 mb-6 overflow-hidden min-h-28 overflow-y-auto ">
                   {product.description}
                 </p>
                 <a href={product.link} className="bg-[#ffbe00] w-[100px] md:w-[120px] py-2 px-4 rounded-md hover:scale-110 transition duration-300 !text-white"> See Product</a>
