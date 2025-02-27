@@ -177,6 +177,14 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/carrer"
+                className="block py-2 px-3 !text-white hover:text-blue-500 text-lg hover:opacity-70 hover:scale-105 transform transition-all duration-200 ease-in-out"
+              >
+                Carrer
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
