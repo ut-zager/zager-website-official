@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNavigate } from "react-router-dom";
+
 
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
-
 const AboutUsSection = () => {
+  const navigate = useNavigate();
     const sectionRef = useRef(null);
     const contentRef = useRef(null);
     const imageRef = useRef(null);
@@ -59,7 +61,11 @@ const AboutUsSection = () => {
             <p className="text-gray-600 mt-4 text-lg leading-relaxed">
               We are a passionate team of designers, developers, and strategists dedicated to crafting cutting-edge solutions. Our goal is to help businesses thrive in the digital landscape by providing top-notch web development, media production, and creative design services.
             </p>
-            <button className="mt-6 bg-[#ffbe00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:cursor-pointer transition">
+            <button
+             onClick={()=>{
+              navigate("/aboutus")
+             }}
+            className="mt-6 bg-[#ffbe00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:cursor-pointer transition">
               Read More
             </button>
           </div>

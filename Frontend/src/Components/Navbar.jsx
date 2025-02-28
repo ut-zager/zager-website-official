@@ -76,7 +76,7 @@ const Navbar = () => {
                 }}
                 className="flex items-center py-2 px-3 text-white hover:opacity-70 hover:scale-105 transform transition-all duration-200 ease-in-out cursor-pointer "
               >
-                Product
+                Platforms
                 <svg
                   className="w-3 h-3 ml-2"
                   fill="none"
@@ -117,39 +117,75 @@ const Navbar = () => {
         `}
               >
                 <ul className="py-2 text-sm text-gray-700">
-                  <li>
+                <li>
                     <NavLink
                       to="#"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Dashboard
+                      Our Platforms
                     </NavLink>
                   </li>
-                  <li>
+                  <li
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                  >
                     <NavLink
-                      to="#"
+                      to="/ourplatforms/gyaanadari"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Settings
+                      Gyaanadari
                     </NavLink>
                   </li>
-                  <li>
+                  <li
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                  >
                     <NavLink
-                      to="#"
+                      to="/ourplatforms/jkworks"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Earnings
+                      JK Works
+                    </NavLink>
+                  </li>
+                  <li
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                  >
+                    <NavLink
+                      to="/ourplatforms/ira-media-and-productions"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Ira Media & Productions
+                    </NavLink>
+                  </li>
+                  <li
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                  >
+                    <NavLink
+                      to="/"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      ZMS
                     </NavLink>
                   </li>
                 </ul>
-                <div className="py-1">
+                {/* <div className="py-1">
                   <NavLink
                     to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Sign out
+                    ZMS
                   </NavLink>
-                </div>
+                </div> */}
               </div>
             </li>
 

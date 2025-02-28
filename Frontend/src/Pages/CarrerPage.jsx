@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 
 function CarrerPage() {
   const words = "Are you passionate about digital marketing and IT solutions?";
+  const words2 = "We are looking for individuals who are:"
 
   const workValues = [
     {
@@ -45,7 +46,7 @@ function CarrerPage() {
     gsap.fromTo(
       containerRef.current,
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
     );
   }, []);
 
@@ -71,6 +72,27 @@ function CarrerPage() {
       heading: "DRIVEN",
     },
   ];
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const [formData, setFormData] = useState({
+        name: '',
+        role: '',
+        email: '',
+        phone: '',
+        // message: ''
+      });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission logic here
+        console.log('Form submitted:', formData);
+      };
 
   return (
     <>
@@ -103,7 +125,7 @@ function CarrerPage() {
         <Heading value={"Why work with us"} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10">
           {workValues.map((value, index) => (
-            <div className="max-w-xs w-full group/card">
+            <div key={index} className="max-w-xs w-full group/card">
               <div
                 className={cn(
                   " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4"
@@ -134,35 +156,12 @@ function CarrerPage() {
         <div className="!mt-15">
           <Heading value={"Our Ideal Candidates"} />
         </div>
-
-        {/* <div className="w-full md:w-2/3 flex  gap-5 h-96 mx-auto">
-            {images.map((image, index) => (
-              <div 
-                key={index}
-                className="relative overflow-hidden rounded-2xl transition-all duration-300 ease-in-out"
-                style={{
-                  width: hoveredIndex === index ? '50%' : '20%',
-                  height: '100%'
-                }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
-                  <h2 className="text-white font-bold text-xl">
-                    {image.heading}
-                  </h2>
-                </div>
-              </div>
-            ))}
-          </div> */}
+        <div className="flex flex-col items-center justify-center ">
+          <TextGenerateEffect words={words2} />
+        </div>
         <div
           ref={containerRef}
-          className=" w-full flex items-center justify-center mt-10 ml-16"
+          className=" w-full flex items-center justify-center mt-10 ml-18"
         >
           <div className="w-full md:w-2/3 flex gap-5 h-96">
             {images.map((image, index) => (
@@ -190,6 +189,93 @@ function CarrerPage() {
             ))}
           </div>
         </div>
+
+
+        <div className="mt-15">
+            <Heading value={"Join Us"} />
+        </div>
+        <div className="bg-white w-[50%] rounded-lg p-6 md:p-8 shadow-xl mx-auto mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                      Fill to join  us
+                    </h2>
+                    <form
+                    //  onSubmit={handleSubmit}
+                     className="space-y-6">
+                      <div>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Name*"
+                          required
+                          className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors"
+                          onChange={handleChange}
+                          value={formData.name}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          name="companyName"
+                          placeholder="Role*"
+                          required
+                          className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors"
+                          onChange={handleChange}
+                          value={formData.role}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email*"
+                          required
+                          className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors"
+                          onChange={handleChange}
+                          value={formData.email}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone*"
+                          required
+                          className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors"
+                          onChange={handleChange}
+                          value={formData.phone}
+                        />
+                      </div>
+                      <div>
+                        {/* <textarea
+                          name="message"
+                          placeholder="Your Message*"
+                          required
+                          rows="4"
+                          className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors resize-none"
+                          onChange={handleChange}
+                          value={formData.message}
+                        /> */}
+                        <label className="block mb-2 text-sm text-gray-600">
+                          Upload Resume*
+                        </label>
+                        <input 
+                        type="file"
+                        name="resume"
+                        placeholder="Upload Resume*"
+                        required
+                        className="w-full px-4 py-2 border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-colors"
+                        />
+                      </div>
+                      <div className="text-right">
+                        <button
+                          type="submit"
+                          className="px-8 py-3 bg-[#ffbe00] text-white rounded hover:cursor-pointer transition-colors font-semibold"
+                        >
+                          SUBMIT
+                        </button>
+                      </div>
+                    </form>
+                  </div>
       </div>
     </>
   );

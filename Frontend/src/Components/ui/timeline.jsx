@@ -32,7 +32,7 @@ export const Timeline = ({
         {/* <h2 className="text-lg md:text-4xl font-black mb-4 text-[#ffbe00] max-w-4xl">
           InSights
         </h2> */}
-        <h2 className="text-4xl text-center md:text-5xl font-bold mb-2 text-[#ffbe00] ">
+        <h2 className="text-4xl text-center md:text-5xl font-bold mb-0 text-[#ffbe00] ">
             InSights
           </h2>
         {/* <p

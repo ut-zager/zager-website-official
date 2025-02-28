@@ -22,24 +22,24 @@ const AboutUsPage = () => {
       description:
         "We are committed to delivering outstanding results and exceeding client expectations.",
     },
-    {
-      icon: "🎓",
-      title: "Always learning.",
-      description:
-        "Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.",
-    },
-    {
-      icon: "🔄",
-      title: "Share everything you know.",
-      description:
-        "Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.",
-    },
-    {
-      icon: "☀️",
-      title: "Enjoy downtime.",
-      description:
-        "Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.",
-    },
+    // {
+    //   icon: "🎓",
+    //   title: "Always learning.",
+    //   description:
+    //     "Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.",
+    // },
+    // {
+    //   icon: "🔄",
+    //   title: "Share everything you know.",
+    //   description:
+    //     "Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.",
+    // },
+    // {
+    //   icon: "☀️",
+    //   title: "Enjoy downtime.",
+    //   description:
+    //     "Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.",
+    // },
   ];
   return (
     <div className="w-full bg-white">
@@ -86,7 +86,9 @@ const AboutUsPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-2 text-[#ffbe00]  text-center">
             Our values
           </h2>
-          <p className=" text-xl mb-16 ml-1 text-center w-full">Values That Inspire</p>
+          <p className=" text-xl mb-16 ml-1 text-center w-full">
+            Values That Inspire
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {values.map((value, index) => (
@@ -125,9 +127,17 @@ const AboutUsPage = () => {
           <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[#ffbe00] sm:text-5xl">
             Our Mission
           </p>
-          <h2 className="text-center text-base/7 font-semibold text-[#051244]">
+          {/* <h2 className="text-center text-base/7 font-semibold text-[#051244]">
             Our mission is simple yet profound
-          </h2>
+          </h2> */}
+          <p className=" text-xl !mt-2 mb-8  mx-auto w-[60%] text-center tracking-tight">
+            Our mission is to provide exceptional digital marketing and IT
+            services that help businesses achieve their goals. We are committed
+            to enhancing online visibility and engagement through innovative
+            marketing strategies, delivering robust IT solutions that streamline
+            operations and drive efficiency, and empowering clients to embrace
+            the digital revolution with confidence and success.
+          </p>
           <div className="!mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2 hover:scale-105 transform transition-all duration-200 ease-in-out">
               <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
@@ -204,19 +214,20 @@ const AboutUsPage = () => {
               <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
             </div>
             <div className="relative lg:row-span-2  hover:scale-105 transform transition-all duration-200 ease-in-out">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] shadow-2xl">
-              <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                Client-Centric Solution
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                "Deliver tailor-made digital solutions that meet our clients' unique needs.
-                </p>
-              </div>
-              <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl shadow-2xl">
-                  {/* <div className="flex bg-gray-800/40 ring-1 ring-white/5">
+              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] shadow-2xl">
+                <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                    Client-Centric Solution
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    "Deliver tailor-made digital solutions that meet our
+                    clients' unique needs.
+                  </p>
+                </div>
+                <div className="relative min-h-[30rem] w-full grow">
+                  <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl shadow-2xl">
+                    {/* <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                     <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                       <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
                         NotificationSetting.jsx
@@ -224,36 +235,36 @@ const AboutUsPage = () => {
                       <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
                     </div>
                   </div> */}
-                  {/* <div className="px-6 pt-6 pb-14">Your code example</div> */}
-                  <img
-                    className="w-full h-full max-lg:max-w-xs !rounded-tl-xl mt-1 object-cover"
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-                    alt=""
-                  />
+                    {/* <div className="px-6 pt-6 pb-14">Your code example</div> */}
+                    <img
+                      className="w-full h-full max-lg:max-w-xs !rounded-tl-xl mt-1 object-cover"
+                      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+              <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
             </div>
           </div>
         </div>
       </div>
-    
 
-
-    {/* Our Values section  */}
+      {/* Our Values section  */}
       <div>
-      <h2 className="text-4xl md:text-5xl font-bold mb-2 text-[#ffbe00]  text-center">
-            Our Vision
-          </h2>
-          <p className=" text-xl !mt-6 mb-8  mx-auto w-[40%] text-center tracking-tight">
-            We believe in creating a digital platform that empowers businesses to thrive,
-            transform their operations, and achieve their goals. Our mission is to create
-            solutions that make complex business challenges simple and accessible to everyone.
-          </p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 text-[#ffbe00]  text-center">
+          Our Vision
+        </h2>
+        <p className=" text-xl !mt-6 mb-8  mx-auto w-[40%] text-center tracking-tight">
+          To be a global leader in providing innovative, customised, and
+          comprehensive digital marketing and IT solutions that empower
+          businesses to thrive in the digital era. We aim to redefine excellence
+          and inspire growth by delivering cutting-edge technology and creative
+          strategies tailored to meet our clients' evolving needs.
+        </p>
       </div>
 
-      <TimelineDemo/>
+      <TimelineDemo />
     </div>
   );
 };

@@ -8,6 +8,9 @@ import Footer from './Components/Footer'
 import AboutUsPage from './Pages/AboutUsPage'
 import ContactUsPage from './Pages/ContactUsPage'
 import CarrerPage from './Pages/CarrerPage'
+import Gyaanadari from './Pages/Gyaanadari'
+import JKWorks from './Pages/JKWorks'
+import IRMediaAndProductions from './Pages/IRMediaAndProductions'
 function App() {
 
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path='/aboutus' element={<AboutUsPage/>}/>
         <Route path='/contactus' element={<ContactUsPage/>}/>
         <Route path='/carrer' element={<CarrerPage/>}/>
+        <Route path='/ourplatforms/gyaanadari' element={<Gyaanadari/>}/>
+        <Route path='/ourplatforms/jkworks' element={<JKWorks/>}/>
+        <Route path='/ourplatforms/ira-media-and-productions' element={<IRMediaAndProductions/>}/>
       </Routes>
       <Footer/>
     </>
