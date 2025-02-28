@@ -51,7 +51,7 @@ const Navbar = () => {
                 }}
                 className="flex items-center py-2 px-3 text-white"
               >
-                Product
+                Platform
                 <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 10 6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M1 1l4 4 4-4"/>
                 </svg>
@@ -60,23 +60,27 @@ const Navbar = () => {
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-44 bg-white rounded-lg shadow-md">
                   <ul className="py-2 text-sm text-gray-700">
-                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100">Dashboard</NavLink></li>
-                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100">Settings</NavLink></li>
-                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100">Earnings</NavLink></li>
+                    <li><NavLink to="/ourplatform" className="block px-4 py-2 hover:bg-gray-100 text-blue-400">Our Platform</NavLink></li>
+                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100 text-blue-400">Gyaanadri</NavLink></li>
+                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100 text-blue-400">JK Works</NavLink></li>
+                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100 text-blue-400">Ira Media Production</NavLink></li>
+                    <li><NavLink to="#" className="block px-4 py-2 hover:bg-gray-100 text-blue-400">ZMS</NavLink></li>
                   </ul>
-                  <div className="py-1">
-                    <NavLink to="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</NavLink>
-                  </div>
+                
                 </div>
               )}
             </li>
-
+             {/* Dropdown  Ends*/}
             <li>
               <NavLink to="/services" className="block py-2 px-3 text-white hover:text-blue-500">Services</NavLink>
             </li>
             <li>
               <NavLink to="/aboutus" className="block py-2 px-3 text-white hover:text-blue-500">About</NavLink>
             </li>
+            <li>
+              <NavLink to="/blogs" className="block py-2 px-3 text-white hover:text-blue-500">Blogs</NavLink>
+            </li>
+
             <li>
               <NavLink to="/contactus" className="block py-2 px-3 text-white hover:text-blue-500">Contact</NavLink>
             </li>
