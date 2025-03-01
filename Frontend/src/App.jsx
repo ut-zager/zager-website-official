@@ -20,6 +20,7 @@ import PrivateRoute from './Components/PrivateRoute'
 import { AuthProvider } from './context/AuthContext'
 import ForgotPassword from './Pages/Auth/ForgotPassword'
 import ResetPassword from './Pages/Auth/ResetPassword'
+import Blogs from './Pages/Blogs'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='/ourplatforms/gyaanadari' element={<Gyaanadari/>}/>
             <Route path='/ourplatforms/jkworks' element={<JKWorks/>}/>
             <Route path='/ourplatforms/ira-media-and-productions' element={<IRMediaAndProductions/>}/>
+            <Route path='/blogs' element={<Blogs/>}/>
             
             
             {/* Protected Routes */}
