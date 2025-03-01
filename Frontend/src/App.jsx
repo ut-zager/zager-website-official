@@ -21,6 +21,7 @@ import { AuthProvider } from './context/AuthContext'
 import ForgotPassword from './Pages/Auth/ForgotPassword'
 import ResetPassword from './Pages/Auth/ResetPassword'
 import Blogs from './Pages/Blogs'
+import OurPlatform from './Components/OurPlatform';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path='/ourplatforms/ira-media-and-productions' element={<IRMediaAndProductions/>}/>
             <Route path='/blogs' element={<Blogs/>}/>
             <Route path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="/ourplatform" element={<OurPlatform />} />
             {/* Protected Routes */}
             <Route element={<PrivateRoute />}>
               <Route path='/dashboard' element={<Dashboard />} />
