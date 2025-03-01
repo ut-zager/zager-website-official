@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
       const { data } = await api.post('/auth/login', credentials)
       localStorage.setItem('token', data.token)
       setAdmin(data.admin)
-      navigate('/')
+      // Navigation removed from here, now handled in Login component
     } catch (error) {
       toast.error('Invalid credentials')
       throw error
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('token')
     setAdmin(null)
-    navigate('/login')
+    navigate('/admin-login')
   }
 
   return (

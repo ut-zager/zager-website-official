@@ -13,7 +13,7 @@ const Login = () => {
     setLoading(true)
     try {
       await login(credentials)
-      navigate('/')
+      navigate('/Dashboard')
     } finally {
       setLoading(false)
     }
