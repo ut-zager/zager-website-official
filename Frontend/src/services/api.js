@@ -28,7 +28,7 @@ api.interceptors.response.use(
 
     if (error.response?.status === 401) {
       localStorage.removeItem('token')
-      window.location = '/login'
+      window.location = '/admin-login'
     }
 
     return Promise.reject(error)

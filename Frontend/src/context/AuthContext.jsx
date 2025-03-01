@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('token')
     setAdmin(null)
-    navigate('/admin-login')
+    navigate('/')
   }
 
   return (

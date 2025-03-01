@@ -12,7 +12,7 @@ const ResetPassword = () => {
     setLoading(true)
     try {
       await api.post('/auth/reset-password', formData)
-      navigate('/login')
+      navigate('/admin-login')
     } finally {
       setLoading(false)
     }

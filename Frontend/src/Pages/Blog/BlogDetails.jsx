@@ -48,7 +48,7 @@ const BlogDetails = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-10 px-4">
       <div className="container mx-auto max-w-3xl">
-        <button 
+        {/* <button 
           onClick={handleBackClick}
           className="flex items-center text-blue-600 hover:text-blue-800 mb-6 font-medium transition-colors duration-200"
         >
@@ -56,7 +56,7 @@ const BlogDetails = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
           Back to Dashboard
-        </button>
+        </button> */}
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
           {blog.image?.url && (
