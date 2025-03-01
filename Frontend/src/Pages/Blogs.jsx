@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import api from '../services/api';
 import { Link, useNavigate } from 'react-router-dom';
 import Heading from '../Components/Heading';
+import BlogList from '../components/BlogList';
+import PublicBlogList from '../Components/PublicBlogList';
+
 
 
 function Blogs() {
-      const [blogs, setBlogs] = useState([]);
+    const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -52,7 +55,7 @@ function Blogs() {
           {filteredBlogs.length > 0 ? (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-semibold text-gray-800">
+                <h2 className="text-xl font-semibold text-[#ffbe00]">
                   {searchTerm ? `Search Results (${filteredBlogs.length})` : 'Your Blog Posts'}
                 </h2>
                 <div className="text-gray-500 text-sm">
@@ -60,7 +63,8 @@ function Blogs() {
                 </div>
               </div>
               
-              <BlogList blogs={filteredBlogs} setBlogs={setBlogs} viewMode="grid" />
+              {/* <BlogList blogs={filteredBlogs} setBlogs={setBlogs} viewMode="grid" /> */}
+              <PublicBlogList blogs={filteredBlogs} setBlogs={setBlogs} viewMode="grid" />
             </div>
           ) : (
             <div>
