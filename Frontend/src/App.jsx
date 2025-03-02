@@ -22,6 +22,8 @@ import ForgotPassword from './Pages/Auth/ForgotPassword'
 import ResetPassword from './Pages/Auth/ResetPassword'
 import Blogs from './Pages/Blogs'
 import OurPlatform from './Components/OurPlatform';
+import Product from './pages/Products';
+import Services from './pages/Services';
 
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
             <Route path='/blogs' element={<Blogs/>}/>
             <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route path="/ourplatform" element={<OurPlatform />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/services" element={<Services />} />
             {/* Protected Routes */}
             <Route element={<PrivateRoute />}>
               <Route path='/dashboard' element={<Dashboard />} />
